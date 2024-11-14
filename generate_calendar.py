@@ -69,15 +69,13 @@ def create_icalendar(weather_data):
     return calendar
 
 # Main script to generate calendar and save it
-def generate_calendar():
-    weather_data = fetch_weather_data()
-    calendar = create_icalendar(weather_data)
-    
-  # Save to .ics file in the root
-with open("weather_calendar.ics", "wb") as f:
-    f.write(calendar.to_ical())
+   def generate_calendar():
+       weather_data = fetch_weather_data()
+       calendar = create_icalendar(weather_data)
 
-
+       # Save to .ics file in the root
+       with open("weather_calendar.ics", "wb") as f:
+           f.write(calendar.to_ical())
 # Call function to generate calendar file
 # Uncomment this if running locally to test
 # generate_calendar()
